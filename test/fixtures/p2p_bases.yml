@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_a: 
+  card_b: 
+  cvv: 
+  expire: 2015-02-24
+  phone: 
+  vendor: 1
+
+two:
+  card_a: 
+  card_b: 
+  cvv: 
+  expire: 2015-02-24
+  phone: 
+  vendor: 1
