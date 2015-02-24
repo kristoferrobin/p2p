@@ -1,0 +1,30 @@
+<%= form_for :p2p do |f| %>
+  <p>
+    <%= f.label :card_a %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :expire %><br>
+    <%= f.darapicker :expire %>
+  </p>
+   <p>
+    <%= f.label :cvv %><br>
+    <%= f.text_field :cvv %>
+  </p>
+ 
+  <p>
+    <%= f.label :card_b %><br>
+    <%= f.text_field :card_b %>
+  </p>
+ 
+  <p>
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </p>
+ 
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
