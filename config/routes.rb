@@ -60,5 +60,5 @@ Rails.application.routes.draw do
  
   resources :p2p
  
-  root 'index#index'
+  root 'p2p#new'
 end
