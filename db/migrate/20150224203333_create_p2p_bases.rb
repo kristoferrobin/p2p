@@ -8,6 +8,8 @@ class CreateP2pBases < ActiveRecord::Migration
       t.text :card_b
       t.integer :phone, :limit => 5
       t.integer :vendor
+      t.text :status
+      t.integer :rrn, :limit => 8
 
       t.timestamps
     end
