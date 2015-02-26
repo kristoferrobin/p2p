@@ -107,6 +107,7 @@ class P2pVpp < ActiveRecord::Base
 			)
 	end
 	def callVPP (uri.host, uri.port, uri.path, data)
+		@data = data ? @data
 		http = Net::HTTP.new(uri.host, uri.port)
 		http.use_ssl = true
 
