@@ -85,7 +85,28 @@ class P2pVpp < ActiveRecord::Base
 			"CardAcceptor": @acceptorB			
 			)		
 	end
-	def callMTR (uri.host, uri.port, uri.path, data)
+	def AFTR (SystemsTraceAuditNumber)
+		@stra = SystemsTraceAuditNumber
+		@data = %w(
+			"SystemsTraceAuditNumber": @stra,
+			"RetrievalReferenceNumber": @rrn ? rrn.find[@stra],
+			"TransactionIdentifier": @id ? id.find[@stra],
+			"DateAndTimeLocalTransaction": DateTime.now,
+			"AcquiringBin": @bin ? bin.find[@stra],
+			"AcquirerCountryCode": @country ? country.find[@stra],
+			"SenderPrimaryAccountNumber": @cardA ? country.find[@stra],
+			"SenderCardExpiryDate": @expire ? expire.find[@stra] ? null,
+			"SenderCurrencyCode": @currency ? currency.find[@stra],
+			"Amount": @amount ? amount.find[@stra],
+			"Surcharge": @surcharge ? surcharge.find[@stra],
+			"ForeignExchangeFeeTransaction": @exchange_fee ? exchange_fee.find[@stra],
+			"OriginalDataElements": @response,
+			"CardAcceptor": @acceptorA,
+			"PointOfServiceData": @psd,
+			"PointOfServiceCapability": @psc
+			)
+	end
+	def callVPP (uri.host, uri.port, uri.path, data)
 		http = Net::HTTP.new(uri.host, uri.port)
 		http.use_ssl = true
 
