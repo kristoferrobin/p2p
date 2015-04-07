@@ -1,5 +1,5 @@
 class P2pVpp < ActiveRecord::Base
-	def ACNL(SystemsTraceAuditNumber, RetrievalReferenceNumber, AcquiringBin, AcquirerCountryCode, PrimaryAccountNumber)
+	def ACNL (SystemsTraceAuditNumber, RetrievalReferenceNumber, AcquiringBin, AcquirerCountryCode, PrimaryAccountNumber)
 		@stan = SystemsTraceAuditNumber
 		@rrn = strftime([format='%y']).[2]
 		@bin = AcquiringBin.[0-6]
